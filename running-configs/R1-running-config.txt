@@ -1,0 +1,100 @@
+Building configuration...
+
+Current configuration : 1133 bytes
+!
+! Last configuration change at 18:11:19 UTC Thu Oct 1 2026
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip cef
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ description WAN-HACIA-ISP
+ ip address dhcp
+ duplex full
+!
+interface FastEthernet1/0
+ description LAN-WEBSERVER
+ ip address 192.168.33.1 255.255.255.240
+ speed auto
+ duplex auto
+!
+interface FastEthernet1/1
+ no ip address
+ shutdown
+ speed auto
+ duplex auto
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+ip route 0.0.0.0 0.0.0.0 192.168.161.1
+ip route 10.10.20.0 255.255.255.0 192.168.161.132
+ip route 192.168.33.128 255.255.255.128 192.168.161.132
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login
+!
+!
+end
