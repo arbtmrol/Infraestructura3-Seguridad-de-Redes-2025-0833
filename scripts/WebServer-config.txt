@@ -1,0 +1,26 @@
+==================================================
+INFRAESTRUCTURA 3 - WEB SERVER
+Seguridad de Redes
+
+Estudiante: Albert Morel
+Matrícula: 2025-0833
+==================================================
+
+# Direccionamiento del servidor
+IP WebServer: 192.168.33.2/28
+Gateway: 192.168.33.1
+
+# Ruta hacia la VLAN 10
+ip route add 192.168.33.128/25 via 192.168.33.1 dev eth0
+
+# Ruta de retorno hacia la red SSL-VPN
+ip route add 10.10.20.0/24 via 192.168.33.1 dev eth0
+
+# Verificar SSH
+ss -tlnp | grep :22
+
+# Verificar HTTPS
+ss -tlnp | grep :443
+
+# Prueba HTTPS realizada desde el cliente
+wget --no-check-certificate -O - https://192.168.33.2
