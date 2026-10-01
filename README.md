@@ -1,14 +1,7 @@
-# Infraestructura 3 - Seguridad de Redes
-
-## 🎥 Video demostrativo
-
-**Enlace del video:** PENDIENTE
-
-> Demostración del funcionamiento de la infraestructura y del cumplimiento de los objetivos establecidos para el laboratorio.
 
 ---
 
-## 👤 Información del estudiante
+##  Información del estudiante
 
 - **Estudiante:** Albert Morel
 - **Matrícula:** 2025-0833
@@ -18,7 +11,7 @@
 
 ---
 
-## 📌 Propósito del laboratorio
+##  Propósito del laboratorio
 
 El propósito de este laboratorio es implementar una infraestructura de red segmentada y protegida mediante un firewall FortiGate, utilizando una VLAN para la red de usuarios, direccionamiento dinámico mediante DHCP y un servidor con servicios HTTPS y SSH.
 
@@ -26,7 +19,7 @@ La infraestructura fue diseñada para permitir que los usuarios accedan al servi
 
 ---
 
-## 🎯 Objetivos
+##  Objetivos
 
 - Implementar un firewall FortiGate como dispositivo principal de seguridad.
 - Configurar una red de usuarios utilizando VLAN 10.
