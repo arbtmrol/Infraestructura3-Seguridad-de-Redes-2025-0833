@@ -69,7 +69,7 @@ La infraestructura fue implementada en GNS3 utilizando FortiGate, dispositivos C
 
 ---
 
-# ⚙️ Implementación
+#  Implementación
 
 ## 1. WebServer
 
